@@ -34,4 +34,5 @@ if ! check_installed "httprobe"; then
   install_httprobe
 fi
 
+chmod +x subfinder.sh
 echo "Setup Successful!"
