@@ -9,7 +9,16 @@ This Bash script facilitates domain asset discovery by leveraging the `assetfind
 5. Uses `httprobe` to check the validity of the subdomains obtained.
 6. Appends the working subdomains to the `works.txt` file using `tee`.
 
+## INSTALLATION
+
+```bash
+chmod +x setup.sh && ./setup.sh
+```
+
+## USAGE
+
 To use this script, simply provide the domain as a command line argument when executing the script. For example:
 
 ```bash
 ./subfinder.sh example.com
+```
