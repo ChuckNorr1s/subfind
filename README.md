@@ -12,6 +12,9 @@ This Bash script facilitates domain asset discovery by leveraging the `assetfind
 ## INSTALLATION
 
 ```bash
+git clone https://github.com/ChuckNorr1s/subfinder.git
+```
+```bash
 chmod +x setup.sh && ./setup.sh
 ```
 
