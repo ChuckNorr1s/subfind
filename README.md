@@ -8,6 +8,7 @@ This Bash script facilitates domain asset discovery by leveraging the `assetfind
 4. Appends the results to the `output.txt` file using `tee`.
 5. Uses `httprobe` to check the validity of the subdomains obtained.
 6. Appends the working subdomains to the `works.txt` file using `tee`.
+7. Organizes them using grep to the file `pretty.txt`.
 
 ## INSTALLATION
 
