@@ -13,10 +13,10 @@ This Bash script facilitates domain asset discovery by leveraging the `assetfind
 ## INSTALLATION
 
 ```bash
-git clone https://github.com/ChuckNorr1s/subfinder.git && cd subfinder
+git clone https://github.com/ChuckNorr1s/subfinder.git
 ```
 ```bash
-chmod +x setup.sh && ./setup.sh
+chmod +x subfinder/setup.sh && subfinder/setup.sh
 ```
 
 ## USAGE
