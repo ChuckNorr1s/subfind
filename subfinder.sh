@@ -5,8 +5,8 @@ file1="$2"
 
 if [ -z "$domain" ] || [ -z "$2" ] ; then  
   echo -e "Error: Domain or file arguments are missing.\n"
-  echo "Usage: ./subfinder.sh <domain> <file-to-save-to>"
-  echo "Example: ./subfinder.sh example.com domains.txt"
+  echo "Usage: subfinder.sh <domain> <file-to-save-to>"
+  echo "Example: subfinder.sh example.com domains.txt"
   exit 1
 fi
 
