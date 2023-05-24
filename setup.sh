@@ -34,7 +34,7 @@ if ! check_installed "httprobe"; then
   install_httprobe
 fi
 
-chmod +x subfinder/subfinder.sh
-sudo cp subfinder/subfinder.sh /usr/bin/subfinder
+chmod +x subfind/subfind.sh
+sudo cp subfind/subfind.sh /usr/bin/subfind
 echo "Setup Successful!"
-sudo rm -r subfinder
+sudo rm -r subfind
