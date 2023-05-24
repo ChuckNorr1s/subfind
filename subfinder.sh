@@ -1,27 +1,31 @@
 #!/bin/bash
 
 domain="$1"
+file1="$2" 
 
-if [ -z "$domain" ]; then
-  echo "Error: Domain argument is missing."
-  echo "Usage: ./subfinder.sh <domain>"
-  echo "Example: ./subfinder.sh example.com"
+if [ -z "$domain" ] || [ -z "$2" ] ; then  
+  echo -e "Error: Domain or file arguments are missing.\n"
+  echo "Usage: ./subfinder.sh <domain> <file-to-save-to>"
+  echo "Example: ./subfinder.sh example.com domains.txt"
   exit 1
 fi
 
-assetfinder --subs-only "$domain" | sort | uniq | tee -a output.txt && cat output.txt | httprobe cat output.txt | tee -a works.txt
+assetfinder --subs-only "$domain" | sort | uniq | httprobe -prefer-https | tee -a works.txt
 
-echo "...Organizing in a pretty format..."
+echo -e "\n...saving the results...\n"
 
 file="works.txt"
 
 if [ ! -f "$file" ]; then
-  echo "Error: $file does not exist."
+  echo "...encountered an error while processing the results..."
   exit 1
 fi
 
-grep -E '^https://' "$file" >> pretty.txt
-echo "---------------------------" >> pretty.txt
-grep -E '^http://' "$file" >> pretty.txt
+echo "---------------------------" > "$file1"
+grep -E '^https://' "$file" >> "$file1"    
+echo "---------------------------" >> "$file1"
+grep -E '^http://' "$file" >> "$file1"
 
-echo "...Organized to pretty.txt..."
+echo "...successfully saved to $file1..."
+
+rm works.txt
