@@ -24,5 +24,5 @@ chmod +x subfinder/setup.sh && subfinder/setup.sh
 To use this script, simply provide the domain and the file patht to save results to as command line arguments when executing the script. For example:
 
 ```bash
-./subfinder.sh example.com sub-domains.txt
+subfinder example.com sub-domains.txt
 ```
