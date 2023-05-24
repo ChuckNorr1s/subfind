@@ -1,4 +1,4 @@
-# Subfinder
+# Subfind
 ## Domain Asset Discovery Script
 
 This Bash script facilitates domain asset discovery by leveraging the `assetfinder` and `httprobe` tools. It takes domain and file path as command line arguments and performs the following steps:
@@ -13,10 +13,10 @@ This Bash script facilitates domain asset discovery by leveraging the `assetfind
 ## INSTALLATION
 
 ```bash
-git clone https://github.com/ChuckNorr1s/subfinder.git
+git clone https://github.com/ChuckNorr1s/subfind.git
 ```
 ```bash
-chmod +x subfinder/setup.sh && subfinder/setup.sh
+chmod +x subfind/setup.sh && subfind/setup.sh
 ```
 
 ## USAGE
@@ -24,5 +24,5 @@ chmod +x subfinder/setup.sh && subfinder/setup.sh
 To use this script, simply provide the domain and the file patht to save results to as command line arguments when executing the script. For example:
 
 ```bash
-subfinder example.com sub-domains.txt
+subfind example.com sub-domains.txt
 ```
